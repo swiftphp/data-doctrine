@@ -1,0 +1,23 @@
+{
+	"name" : "swiftphp/data-doctrine",
+	"description" : "SwiftPHP基于PHP5的快速的面向对象的PHP类库(数据模块Doctrine实现)",
+	"type" : "library",
+	"license" : "MIT",
+	"minimum-stability" : "dev",
+	"authors" : [{
+			"name" : "Tomix Chiu",
+			"email" : "qhr2001@yahoo.com"
+		}
+	],
+	"require" : {
+		"php" : ">=7.1.0",
+		"swiftphp/logger" : "~1.0",
+		"swiftphp/system" : "~1.0",
+		"doctrine/orm" : "~2.6"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"swiftphp\\data\\" : "src"
+		}
+	}
+}
