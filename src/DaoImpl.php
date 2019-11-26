@@ -14,7 +14,7 @@ use swiftphp\data\IMapping;
  * @author Tomix
  *
  */
-class DoctrineDaoImpl implements IDao
+class DaoImpl implements IDao
 {
     /**
      * 日志记录器
@@ -619,7 +619,7 @@ class DoctrineDaoImpl implements IDao
     public function getMapping():IMapping
     {
         if($this->m_mapping==null){
-            $this->m_mapping=new DoctrineMapping();
+            $this->m_mapping=new Mapping();
             $this->m_mapping->setEntityManager($this->m_entityManager);
         }
         return $this->m_mapping;

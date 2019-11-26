@@ -7,7 +7,11 @@ use Doctrine\Common\Annotations\SimpleAnnotationReader;
 use Doctrine\Common\Annotations\CachedReader;
 use Doctrine\Common\Cache\ArrayCache;
 
-
+/**
+ * ORM注解驱动
+ * @author Tomix
+ *
+ */
 class AnnotationDriver extends AnnotationDriver
 {
     public function __construct(array $paths=null){

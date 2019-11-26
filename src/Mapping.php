@@ -9,7 +9,7 @@ use swiftphp\data\IMapping;
  * @author Tomix
  *
  */
-class DoctrineMapping implements IMapping
+class Mapping implements IMapping
 {
     /**
      * 实体管理器

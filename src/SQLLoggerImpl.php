@@ -31,7 +31,7 @@ class SQLLoggerImpl implements SQLLogger
      */
     public function stopQuery()
     {
-
+        Console::printLine("stop query-----------------------------------------------------\r\n");
     }
 }
 
