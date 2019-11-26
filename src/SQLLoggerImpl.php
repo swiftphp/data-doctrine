@@ -17,14 +17,15 @@ class SQLLoggerImpl implements SQLLogger
      */
     public function startQuery($sql, array $params = null, array $types = null)
     {
-        //Console::printLine((string)date("Y-m-d H:i:s")." start query----------------------------------------\r\n");
+        list($usec, $sec) = explode(" ", microtime());
+        Console::printLine((string)date("Y-m-d H:i:s",$sec).substr((string)number_format((float)$usec,3),1)." start query----------------------------------------");
         $sql=str_replace(" FROM", "\r\nFROM", $sql);
         $sql=str_replace(" WHERE", "\r\nWHERE", $sql);
         $sql=str_replace(" ORDER BY", "\r\nORDER BY", $sql);
         $sql=str_replace(" INNER JOIN", "\r\nINNER JOIN", $sql);
-        Console::printLine($sql."\r\n");
+        Console::printLine($sql);
     }
-
+    
     /**
      * Marks the last started query as stopped. This can be used for timing of queries.
      *
@@ -32,7 +33,8 @@ class SQLLoggerImpl implements SQLLogger
      */
     public function stopQuery()
     {
-        //Console::printLine((string)date("Y-m-d H:i:s")."stop query-----------------------------------------------------\r\n");
+        list($usec, $sec) = explode(" ", microtime());
+        Console::printLine((string)date("Y-m-d H:i:s",$sec).substr((string)number_format((float)$usec,3),1)." stop query----------------------------------------\r\n");
     }
 }
 
