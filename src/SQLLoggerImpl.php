@@ -17,7 +17,7 @@ class SQLLoggerImpl implements SQLLogger
      */
     public function startQuery($sql, array $params = null, array $types = null)
     {
-        Console::printLine((string)date("Y-m-d H:i:s")." start query----------------------------------------\r\n");
+        //Console::printLine((string)date("Y-m-d H:i:s")." start query----------------------------------------\r\n");
         $sql=str_replace(" FROM", "\r\nFROM", $sql);
         $sql=str_replace(" WHERE", "\r\nWHERE", $sql);
         $sql=str_replace(" ORDER BY", "\r\nORDER BY", $sql);
@@ -32,7 +32,7 @@ class SQLLoggerImpl implements SQLLogger
      */
     public function stopQuery()
     {
-        Console::printLine((string)date("Y-m-d H:i:s")."stop query-----------------------------------------------------\r\n");
+        //Console::printLine((string)date("Y-m-d H:i:s")."stop query-----------------------------------------------------\r\n");
     }
 }
 
