@@ -1,7 +1,7 @@
 <?php
 namespace swiftphp\data\doctrine;
 
-use Doctrine\ORM\Mapping\Driver\AnnotationDriver;
+use Doctrine\ORM\Mapping\Driver\DoctrineAnnotationDriver;
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Doctrine\Common\Annotations\SimpleAnnotationReader;
 use Doctrine\Common\Annotations\CachedReader;
@@ -12,7 +12,7 @@ use Doctrine\Common\Cache\ArrayCache;
  * @author Tomix
  *
  */
-class AnnotationDriver extends AnnotationDriver
+class DoctrineAnnotationDriver extends DoctrineAnnotationDriver
 {
     public function __construct(array $paths=null){
         AnnotationRegistry::registerUniqueLoader('class_exists');
